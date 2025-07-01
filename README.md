@@ -6,24 +6,35 @@ Our theoretical and experimental results show that Bloofi and Flat-Bloofi provid
 
 ### Prerequisites
 
-- Java
-- ant http://ant.apache.org/ (on a Mac, you can install ant with ``brew install ant`` after installing ``brew``)
+- Java (JDK 8 or later)
+- Maven (https://maven.apache.org/) for building and testing
+- (Optional) Ant (http://ant.apache.org/) — on a Mac, you can install Ant with `brew install ant` after installing Homebrew
 
+We build on an existing Bloom filter library (https://github.com/magnuss/java-bloomfilter) by Magnus Skjegstad, which we embedded and modified. We also use JUnit and Hamcrest, included as jar files for your convenience, but Maven will automatically download them if you use it.
 
-We build on an existing Bloom filter library (https://github.com/magnuss/java-bloomfilter) by Magnus Skjegstad which we embedded and modified. We also use junit and Hamcrest which we include as jar files for your convenience.
 
 ### Usage
 
 We provide the necessary software to reproduce our experiments. The software includes unit testing. The documentation is minimal and the software is not meant for production use. It is provided mostly for research purposes and as a way to promote the ideas.
 
-Building and running unit tests :
+#### Building and running unit tests with Maven
+
+You can use Maven to build the project and run the tests:
+
+```
+mvn clean package
+mvn test
+```
+
+#### Building and running unit tests with Ant
 
 ```
 ant
 ```
 
+#### Running experiments
 
-Main class to run the experiments: ``mvm.provenance.TestAC``.
+Main class to run the experiments: `mvm.provenance.TestAC`.
 
 Sample run:
 ```
@@ -55,6 +66,12 @@ Input parameters, with default values:
 
 > Adina Crainiceanu. Bloofi: A Hierarchical Bloom Filter Index with Applications to Distributed Data Provenance. 2nd International Workshop on Cloud Intelligence (Cloud-I 2013) collocated with the 39th International Conference in Very Large Data Bases VLDB. Riva del Garda, Italy, 2013
 
+
+### Continuous Integration
+
+This project uses GitHub Actions for continuous integration. All pushes and pull requests to the main branch will automatically trigger a build and run the tests using Maven.
+
+You can find the workflow configuration in `.github/workflows/ci.yml`.
 
 ### License
 
