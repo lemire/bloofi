@@ -63,9 +63,7 @@ Input parameters, with default values:
 
 ### References
 
-> Adina Crainiceanu and Daniel Lemire. Bloofi: Multidimensional Bloom Filters.  Information Systems,Volume 54, December 2015, pp.311-324 http://arxiv.org/abs/1501.01941 http://www.sciencedirect.com/science/article/pii/S0306437915000125
-
-> Adina Crainiceanu. Bloofi: A Hierarchical Bloom Filter Index with Applications to Distributed Data Provenance. 2nd International Workshop on Cloud Intelligence (Cloud-I 2013) collocated with the 39th International Conference in Very Large Data Bases VLDB. Riva del Garda, Italy, 2013
+- Adina Crainiceanu and Daniel Lemire. Bloofi: Multidimensional Bloom Filters.  Information Systems,Volume 54, December 2015, pp.311-324 http://arxiv.org/abs/1501.01941 
 
 
 ### Continuous Integration
